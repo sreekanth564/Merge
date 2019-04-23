@@ -10,7 +10,7 @@ pipeline {
                      bat '''git --version
                             git checkout master
                             git merge origin/f1
-						                git push origin master'''
+						                git push origin '''
                   }
         
         }
