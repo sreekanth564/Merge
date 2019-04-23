@@ -8,9 +8,9 @@ pipeline {
 		stage ('Run UnitTests on Merge') {
                 steps {
                      bat '''git --version
-                            git checkout master
+                            git checkout m1
                             git merge origin/f1
-						                git push origin '''
+			    git push origin m1 '''
                   }
         
         }
