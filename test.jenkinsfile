@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+	stages
+      {
+        stage ('Checkout scm') {
+            steps {checkout scm	}
+					}
+		stage ('Run UnitTests on Merge') {
+                steps {
+                     bat '''git --version
+                            git checkout m1
+                            git merge origin/f1
+			    git push origin m1 '''
+                  }
+        
+        }
+        }  
+		}
+
