@@ -9,7 +9,7 @@ pipeline {
                 steps {
                      bat ''' git checkout m1
                              git pull origin m1
-                             git merge origin f1
+                             git merge origin/f1
                              git push -u origin m1 '''
                        }
                        }
