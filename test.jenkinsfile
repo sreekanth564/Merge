@@ -7,13 +7,12 @@ pipeline {
 					}
 		stage ('Run UnitTests on Merge') {
                 steps {
-                     bat '''git --version
-                            git checkout m1
-                            git merge origin/f1
-			    git push origin m1 '''
-                  }
-        
-        }
-        }  
-		}
+                     bat ''' git checkout m1
+                             git pull origin m1
+                             git merge origin f1
+                             git push -u origin m1 '''
+                       }
+                       }
+                       }  
+		       }
 
